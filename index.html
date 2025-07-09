@@ -12,101 +12,76 @@
       height: 100%;
     }
 
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      color: #111;
-      line-height: 1.6;
-      padding: 40px 20px;
-      max-width: 900px;
-      margin: auto;
-      position: relative;
-      z-index: 1;
-    }
+   <body>
 
-    /* Animated Background */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(-45deg, #f0f4ff, #ffffff, #e3f2fd, #fefefe);
-      background-size: 400% 400%;
-      animation: gradientAnimation 15s ease infinite;
-      z-index: -1;
-    }
+  <!-- Background Video -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="background.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
 
-    @keyframes gradientAnimation {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+  <!-- Overlay for readability -->
+  <div class="video-overlay"></div>
 
-    h1, h2, h3 { margin-bottom: 10px; }
-    section { margin: 60px 0; }
-    a { color: #0070f3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .highlight { color: #0070f3; font-weight: bold; }
-    .section-title { font-size: 1.5em; margin-bottom: 20px; border-bottom: 2px solid #eee; padding-bottom: 5px; }
-    ul { list-style: none; padding-left: 0; }
-    .contact a { display: inline-block; margin-right: 15px; }
-    .footer { margin-top: 60px; font-size: 0.9em; color: #666; text-align: center; }
-  </style>
-</head>
-<body>
+  <!-- Main Content -->
+  <div class="content">
 
-  <!-- Hero Section -->
-  <section data-aos="fade-up">
-    <h1>Pranjal Prerak Mishra</h1>
-    <p><strong>Senior Software Engineer | GCP Data Engineer | ETL Developer</strong></p>
-    <p>📍 Kolkata, India · <a href="mailto:mishrapranjalprerak@gmail.com">mishrapranjalprerak@gmail.com</a> · <a href="https://www.linkedin.com/in/pranjal-prerak-mishra-a98b74217" target="_blank">LinkedIn</a></p>
-  </section>
+    <!-- Hero Section -->
+    <section data-aos="fade-up">
+      <h1>Pranjal Prerak Mishra</h1>
+      <p><strong>Senior Software Engineer | GCP Data Engineer | ETL Developer</strong></p>
+      <p>📍 Kolkata, India · <a href="mailto:mishrapranjalprerak@gmail.com">mishrapranjalprerak@gmail.com</a> · <a href="https://www.linkedin.com/in/pranjal-prerak-mishra-a98b74217" target="_blank">LinkedIn</a></p>
+    </section>
 
-  <!-- About Section -->
-  <section data-aos="fade-up">
-    <h2 class="section-title">About Me</h2>
-    <p>Dedicated Data Engineer with 3 years of experience designing, developing, and optimizing data pipelines on Google Cloud Platform (GCP). Skilled in Python, SQL, and GCP tools like BigQuery, Cloud Functions, Cloud Storage, and Composer. An enthusiastic team player who collaborates effectively and delivers scalable data solutions.</p>
-  </section>
+    <!-- About Section -->
+    <section data-aos="fade-up">
+      <h2 class="section-title">About Me</h2>
+      <p>Dedicated Data Engineer with 3 years of experience designing, developing, and optimizing data pipelines on Google Cloud Platform (GCP). Skilled in Python, SQL, and GCP tools like BigQuery, Cloud Functions, Cloud Storage, and Composer. An enthusiastic team player who collaborates effectively and delivers scalable data solutions.</p>
+    </section>
 
-  <!-- Projects Section -->
-  <section data-aos="fade-up">
-    <h2 class="section-title">Projects</h2>
-    <ul>
-      <li><strong>GCP Data Pipeline Automation</strong> – End-to-end orchestration of ingestion and transformation using Composer, BigQuery & Cloud Functions.</li>
-      <li><strong>Data Mart Analysis</strong> – Performed deep data mart analysis on 15+ GB datasets to generate KPIs for business teams.</li>
-      <li><strong>ETL Framework (Informatica)</strong> – Created reusable ETL frameworks to automate incremental loads and transformations with SCD logic.</li>
-    </ul>
-  </section>
+    <!-- Projects Section -->
+    <section data-aos="fade-up">
+      <h2 class="section-title">Projects</h2>
+      <ul>
+        <li><strong>GCP Data Pipeline Automation</strong> – End-to-end orchestration of ingestion and transformation using Composer, BigQuery & Cloud Functions.</li>
+        <li><strong>Data Mart Analysis</strong> – Performed deep data mart analysis on 15+ GB datasets to generate KPIs for business teams.</li>
+        <li><strong>ETL Framework (Informatica)</strong> – Created reusable ETL frameworks to automate incremental loads and transformations with SCD logic.</li>
+      </ul>
+    </section>
 
-  <!-- Skills Section -->
-  <section data-aos="fade-up">
-    <h2 class="section-title">Skills & Tools</h2>
-    <p><span class="highlight">Languages:</span> Java, Python, SQL</p>
-    <p><span class="highlight">GCP Tools:</span> BigQuery, Cloud Functions, Cloud Storage, Composer (Airflow), Dataflow, Cloud Scheduler, Cloud Pub/Sub</p>
-    <p><span class="highlight">ETL:</span> Informatica, IICS, SSIS</p>
-    <p><span class="highlight">Others:</span> Git, PySpark, Data Visualization, DWH Design</p>
-  </section>
+    <!-- Skills Section -->
+    <section data-aos="fade-up">
+      <h2 class="section-title">Skills & Tools</h2>
+      <p><span class="highlight">Languages:</span> Java, Python, SQL</p>
+      <p><span class="highlight">GCP Tools:</span> BigQuery, Cloud Functions, Cloud Storage, Composer (Airflow), Dataflow, Cloud Scheduler, Cloud Pub/Sub</p>
+      <p><span class="highlight">ETL:</span> Informatica, IICS, SSIS</p>
+      <p><span class="highlight">Others:</span> Git, PySpark, Data Visualization, DWH Design</p>
+    </section>
 
-  <!-- Certifications & Achievements -->
-  <section data-aos="fade-up">
-    <h2 class="section-title">Certifications & Achievements</h2>
-    <ul>
-      <li>Google Cloud Certified: Professional Data Engineer</li>
-      <li>Google Cloud Certified: Associate Cloud Engineer</li>
-      <li>Microsoft Certified: AZ-900 Azure Fundamentals</li>
-      <li>🏆 Bravo Award, High-Five Award, and Top Talent Award at Persistent Systems</li>
-    </ul>
-  </section>
+    <!-- Certifications & Achievements -->
+    <section data-aos="fade-up">
+      <h2 class="section-title">Certifications & Achievements</h2>
+      <ul>
+        <li>Google Cloud Certified: Professional Data Engineer</li>
+        <li>Google Cloud Certified: Associate Cloud Engineer</li>
+        <li>Microsoft Certified: AZ-900 Azure Fundamentals</li>
+        <li>🏆 Bravo Award, High-Five Award, and Top Talent Award at Persistent Systems</li>
+      </ul>
+    </section>
 
-  <!-- Contact -->
-  <section class="contact" data-aos="fade-up">
-    <h2 class="section-title">Contact</h2>
-    <p>Email: <a href="mailto:mishrapranjalprerak@gmail.com">mishrapranjalprerak@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/pranjal-prerak-mishra-a98b74217" target="_blank">View Profile</a></p>
-  </section>
+    <!-- Contact -->
+    <section class="contact" data-aos="fade-up">
+      <h2 class="section-title">Contact</h2>
+      <p>Email: <a href="mailto:mishrapranjalprerak@gmail.com">mishrapranjalprerak@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/pranjal-prerak-mishra-a98b74217" target="_blank">View Profile</a></p>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer" data-aos="fade-up">
-    <p>©️ 2025 Pranjal Prerak Mishra. Built with HTML & ❤️</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up">
+      <p>©️ 2025 Pranjal Prerak Mishra. Built with HTML & ❤️</p>
+    </footer>
+
+  </div>
 
   <!-- AOS Script -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -116,6 +91,5 @@
       once: true,
     });
   </script>
-
 </body>
 </html>
